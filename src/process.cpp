@@ -16,10 +16,8 @@ using std::string;
 using std::to_string;
 using std::vector;
 
-// I implemented : Return this process's ID --------------------------
 int Process::Pid() { return this->PID_; }
 
-// I implemented : Return this process's CPU utilization -------------------
 float Process::CpuUtilization() {
   float uptime = LinuxParser::UpTime(PID_);
   float ActiveJiffSecs = LinuxParser::ActiveJiffies(PID_);
